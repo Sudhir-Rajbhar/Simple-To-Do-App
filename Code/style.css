@@ -1,0 +1,201 @@
+/* Font Importing */
+@font-face {
+    font-family: doumbar;
+    src: url(/Font/doumbar-medium-webfont.woff2);
+}
+@font-face {
+    font-family: sawtoncircular;
+    src: url(/Font/sawtoncircular-thin-webfont.woff2);
+}
+@font-face {
+    font-family: poppins;
+    src: url(/Font/Poppins-Medium.ttf);
+}
+
+/* CSS Genral Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: poppins; /* This is the most common used font in this web app */
+}
+body, html {
+    width: 100%;
+    height: 100%;
+}
+
+/* Styling the main section */
+.main {
+    height: 100vh;
+    min-width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: start;
+
+    background: url("/Assest/black-chalk.jpg");
+
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    background-position: center;
+    background-size: contain;
+
+    overflow: auto;
+
+    /* Tried a diffrent aproach to get another effect, but it seems not good */
+    /* background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover; */
+
+
+}
+
+/* To-do app */
+/* To-do container */
+.to-do-app {
+    width: 25%;
+    margin-top: 50px;
+    min-height: 50%;
+    border-radius: 15px;
+
+    background-color: #fff;
+}
+
+/* To-do Header */
+.todo-header {
+    margin: 20px 0 30px;
+
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+
+}
+.todo-header>h1 {
+    font-family: doumbar;
+    font-size: 48px;
+}
+.todo-header>img {
+    height: 45px;
+    position: relative;
+}
+
+/* To-do body */
+.todo-body {
+    width: 80%;
+    margin: 0 auto;
+    /* background-color: royalblue; */
+}
+
+/* To-do user input */
+.todo-form {
+    display: flex;
+    width: 100%;
+}
+.todo-form > *{
+    border: 2px solid black;
+    border-collapse: collapse;
+    outline: transparent;
+    padding: 8px;
+    margin-bottom: 30px;
+}
+.todo-form>.user-input {
+    width: 85%;
+}
+.todo-form>.submit {
+    width: 15%;
+    background-color: #000;
+    color: white;
+    font-size: 17px;
+    cursor: pointer;
+}
+
+/* to-do task container */
+.todo-task-container>li {
+    height: 35px;
+    list-style-type: none;
+    margin: 20px 0;
+    position: relative;
+    padding: 10px;
+    border-bottom: 2px solid black;
+    user-select: none;
+}
+.todo-task-container>li::before {
+    content: "";
+
+    width: 25px;
+    height: 25px;
+
+    background-image: url("/Assest/Icons/square.png");
+    background-position: center;
+    background-size: cover;
+
+    position: absolute;
+    top: 10px;
+    left: -9%;
+}
+.todo-task-container .checked::before {
+    background-image: url("/Assest/Icons/square-check.png"); 
+}
+.checked{
+    color: #555;
+    text-decoration: line-through;
+}
+/* .todo-task-container>li::after{
+    content: "";
+
+    width: 25px;
+    height: 25px;
+
+    background-image: url("/Assest/Icons/trash.png");
+    background-position: center;
+    background-size: cover;
+
+    position: absolute;
+    top: 5px;
+    right: 0;
+
+    border-radius: 50%;
+    background-color: #FFD9D9;
+    
+} */
+ul li span {
+    width: 30px;
+    height: 30px;
+
+    /* background-image: url(/Assest/Icons/Trash-with-bgc.png); */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    position: absolute;
+    top: 0px;
+    right: 0;
+    border-radius: 50%;
+    
+
+}
+ul li span:hover {
+    cursor: pointer;
+}
+
+/* Clear button */
+.bottom {
+    display: flex;
+    justify-content: center;
+    
+}
+.bottom>button {
+    margin: 0 auto;
+    border-radius: 30px;
+    outline: none;
+    border: 3px solid black;
+    padding: 5px 15px;
+    font-size: 25px;
+    margin-top: 35px;
+    background-color: #ffd9d9;
+    cursor: pointer;
+}
