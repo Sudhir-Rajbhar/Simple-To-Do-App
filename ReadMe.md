@@ -15,7 +15,7 @@ The app's design is a product of my creativity, and I utilized Figma for the fir
 
 ## Ongoing: Update Feature
 
-Currently, we are actively working on implementing an update feature to enhance the functionality of the app.
+Currently, we are thinking to work on implementing an update feature to enhance the functionality of the app.
 
 ## Images and Fonts
 
